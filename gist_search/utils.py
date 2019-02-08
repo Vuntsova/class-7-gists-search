@@ -1,4 +1,4 @@
-import requests
+import requests #python library
 
 BASE_URL = 'https://api.github.com/users/{username}/gists'
 
@@ -9,3 +9,7 @@ def get_gists(username):
     if not resp.ok:
         return None
     return resp.json()
+# gists = get_gists(username="santiagobasulto")
+# first_three_gists = gists[:3]
+# for gist in first_three_gists:
+#     print("{:<40} | {}".format(gist["id"], gist['description']))
